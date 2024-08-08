@@ -12,3 +12,5 @@ rpsa_client-2.00-35-aff683518 (directory) has many things inside:
 
 Can use ./rpsa_client --h to see configuration settings for various streaming modes
 
+Python script called bcmProducer.py will need to be edited to allow for use of data acquired with run.bash
+
