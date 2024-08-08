@@ -1,0 +1,43 @@
+version: '3'
+
+networks:
+    brianna_pydapter:
+      driver: bridge
+
+services:
+
+  redis:
+    image: "redis:latest"
+    #image: "adregistry.fnal.gov/redislabs/redis:latest"
+    container_name: brianna_redis
+    ports:
+      - "6380:6379"
+    networks:
+      - brianna_pydapter
+
+  jupyter:
+    image: "jupyterredis:latest"
+    #image: "adregistry.fnal.gov/adinst/jupyterredis:latest"
+    volumes:
+      - .:/home/jovyan/work
+    ports:
+      - "8889:8888"
+    container_name: brianna_jupyter
+    depends_on:
+      - redis
+    networks:
+      - brianna_pydapter
+
+
+  insight:
+    image: redislabs/redisinsight
+    #image: "adregistry.fnal.gov/redislabs/redisinsight" 
+    container_name: brianna_insight
+    ports:
+      - "5541:5540"
+    depends_on:
+      - redis
+    networks:
+      - brianna_pydapter
+
+
