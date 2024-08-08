@@ -1,4 +1,4 @@
-# run.bash file: copy all contents below
+# run.bash
 
 #!/bin/bash
 
