@@ -15,7 +15,7 @@ exampleDevice.py, pydapter.py, RedisAdapter.py code came from Bobby
 
 Can use ./rpsa_client --h to see configuration settings for various streaming modes
 
-Most recent / "final versions" (for Brianna's purposes) of all files necessary for this project
+Most recent / "final versions" (for Brianna's purposes) of all files necessary for this project are located in Dewey_LastDay_Edits.zip
 ** things will definitely need some changing/editing
 ** I decided to leave other files in here so you could see old iterations / because I don't really know how github works (sorry)
 - dataRun.sh: collects data with beam+baseline configuration (need to make sure that generators are set up to "stream A" configuration BEFORE running data using ./dataRun.sh in terminal); puts data stream with STREAM_NAME = "DATA" into subfolder and runs bcmProducer.py
