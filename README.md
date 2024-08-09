@@ -15,5 +15,12 @@ exampleDevice.py, pydapter.py, RedisAdapter.py code came from Bobby
 
 Can use ./rpsa_client --h to see configuration settings for various streaming modes
 
+Most recent / "final versions" (for Brianna's purposes) of all files necessary for this project
+** things will definitely need some changing/editing
+** I decided to leave other files in here so you could see old iterations / because I don't really know how github works (sorry)
+- dataRun.sh: collects data with beam+baseline configuration (need to make sure that generators are set up to "stream A" configuration BEFORE running data using ./dataRun.sh in terminal); puts data stream with STREAM_NAME = "DATA" into subfolder and runs bcmProducer.py
+- baselineRun.sh: collects data with baseline configuration (need to make sure that generators are set up to "stream B" configuration BEFORE running data using ./baselineRun.sh in terminal); puts data stream with STREAM_NAME = "BASELINE" into subfolder and runs bcmProducer.py
+- bcmProducer.py: takes in data (csv file) and streams to Redis with the appropriate stream name
+- bcmConsumer.py: takes in data files by stream keys from Redis; has different functions defined to perform various tasks, such as "main" which reads data from Redis stream, "analyze" (doing subtraction step), "process_signal" which does the other processing steps, and "streamBack" which streams processed data back to Redis
 
-
+If you have any questions, feel free to reach out to me at either bdewey@nd.edu or briannadewey26@gmail.com
