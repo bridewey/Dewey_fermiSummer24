@@ -26,3 +26,4 @@ exampleDevice.py, pydapter.py, RedisAdapter.py code came from Bobby
 Can use ./rpsa_client --h to see configuration settings for various streaming modes
 
 If you have any questions, feel free to reach out to me at either bdewey@nd.edu or briannadewey26@gmail.com
+** edit: I no longer have access to bdewey@nd.edu so please only contact me via the other email listed
